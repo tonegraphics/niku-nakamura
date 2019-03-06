@@ -1,0 +1,16 @@
+{
+  "name": "niku-nakamura",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/tonegraphics/niku-nakamura.git",
+  "author": "Taiga KIYOKAWA <taiga.kiyokawa106@mail.kyutech.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "auto-prefixer": "^0.4.2",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
