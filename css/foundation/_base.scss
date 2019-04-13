@@ -1,3 +1,10 @@
 body {
   font-family: 'Noto Serif JP', serif;
 }
+
+a {
+  color: #EAE5E5;
+  &visited {
+    color: #EAE5E5;
+  }
+}
