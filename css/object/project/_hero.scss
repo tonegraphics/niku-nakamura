@@ -5,7 +5,8 @@
   height: 100vh;
   position: relative;
 
-  background-color: $black;
+  background-image: url("../../../images/hero.png");
+  background-size: cover;
 
   display: flex;
   justify-content: center;
@@ -29,14 +30,10 @@
   }
 
   &__title {
-    width: 40vw;
-    height: 20vh;
+    width: 30vw;
+    height: 30vh;
 
     background-color: $white;
-    // position: absolute;
-    // right: 0;
-    // left: 0;
-    // top: 45%;
 
     display: flex;
     justify-content: center;
