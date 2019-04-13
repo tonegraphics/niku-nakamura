@@ -1,38 +1,29 @@
-var gulp         = require('gulp');
-var sass         = require('gulp-sass');
-var sourcemaps   = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require("browser-sync");
+// gulpプラグインの読み込み
+const gulp = require("gulp");
+// Sassをコンパイルするプラグインの読み込み
+const sass = require("gulp-sass");
 
- 
-gulp.task('default', ['sass']);
+// style.scssの監視タスクを作成する
+gulp.task("default", function() {
+  // ★ style.scssファイルを監視
+  return gulp.watch("css/**/*.scss", function() {
+    // style.scssの更新があった場合の処理
 
-gulp.task('watch', ['server'], function () {
-	gulp.watch('./css/**/*.scss', ['sass']);
-	gulp.watch('./css/**/*.css', ['bs-reload']);
-	gulp.watch('./*.html', ['bs-reload']);
-	gulp.watch('./script/**/*.js', ['bs-reload']);
+    // style.scssファイルを取得
+    return (
+      gulp
+        .src("css/**/*.scss")
+        // Sassのコンパイルを実行
+        .pipe(
+          sass({
+            outputStyle: "compressed"
+          })
+            // Sassのコンパイルエラーを表示
+            // (これがないと自動的に止まってしまう)
+            .on("error", sass.logError)
+        )
+        // cssフォルダー以下に保存
+        .pipe(gulp.dest("css"))
+    );
+  });
 });
-
-gulp.task('sass', function () {
-	gulp.src('./css/**/*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-		// .pipe(sourcemaps.write({includeContent: false}))
-		// .pipe(sourcemaps.init({loadMaps: true}))
-		.pipe(autoprefixer(['last 3 versions', 'ie >= 8', 'Android >= 4', 'iOS >= 8']))
-		// .pipe(sourcemaps.write())
-		.pipe(gulp.dest('./css/'));
-});
-
-gulp.task('server', function() {
-  return browserSync.init({
-    server: {
-      baseDir: '.'
-    }
-  })
-})
-
-gulp.task('bs-reload', function() {
-  browserSync.reload();
-})
