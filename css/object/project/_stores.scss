@@ -1,3 +1,61 @@
+@import "variable/_variables";
+
 .p-stores {
   height: 100vh;
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+      background-color: $white;
+      width: 40%;
+      height: 180px;
+      padding: 32px;
+      margin: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      h2 {
+        font-size: 1.6rem;
+        padding: 16px;
+      }
+      li {
+        font-size: 1.2rem;
+        padding: 4px;
+      }
+      &--contact {
+        background-color: $accent;
+        color: $white;
+        width: 40%;
+        height: 180px;
+        padding: 32px;
+        margin: 24px;
+        h2 {
+          font-size: 2rem;
+          padding: 16px;
+          text-align: center;
+        }
+        p {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .p-stores {
+    height: auto;
+    &-list {
+      &__item {
+        width: 80%;
+        &--contact {
+          width: 80%;
+        }
+      }
+    }
+  }
 }

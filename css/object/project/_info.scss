@@ -1,3 +1,49 @@
+@import "variable/_variables";
+
 .p-info {
   height: 100vh;
+  &-list {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: center;
+    &__outline {
+      padding: 24px;
+      h3 {
+        font-size: 1.6rem;
+        padding: 32px 0;
+      }
+      table {
+        background-color: $white;
+        font-size: 1.2rem;
+        tr {
+          height: 5vh;
+          td {
+            padding: 16px 24px;
+            vertical-align: middle;
+            &:first-child {
+              font-weight: bold;
+              // padding-right: 16px;
+            }
+            &:last-child {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .p-info {
+    height: auto;
+  }
+  table td{
+    font-size: 1rem;
+  }
 }
