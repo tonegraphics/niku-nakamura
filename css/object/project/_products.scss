@@ -5,15 +5,15 @@
 
   .p-productList {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     width: 100%;
     margin-top: 80px;
     flex-wrap: wrap;
 
     .p-product {
-      width: 45%;
-      margin: 24px;
+      width: 480px;
+      margin: 0 8px;
       &__name {
         font-size: 1.5rem;
         margin-bottom: 16px;
@@ -37,7 +37,6 @@
   .p-products {
     height: auto;
     .p-productList {
-      margin-top: 48px;
       .p-product {
         width: 100%;
         margin-bottom: 48px;
