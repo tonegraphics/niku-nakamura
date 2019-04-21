@@ -2,7 +2,7 @@
 
 .p-stores {
   height: 100vh;
-  padding: 0 24px;
+  padding-bottom: 64px;
   &-list {
     display: flex;
     flex-wrap: wrap;
@@ -19,6 +19,7 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
+      box-shadow: -8px 8px 6px lighten($black, 60%);
       h2 {
         font-size: 1.6rem;
         padding: 16px;
@@ -28,6 +29,7 @@
         padding: 4px;
       }
       &--contact {
+        box-shadow: -8px 8px 6px lighten($black, 60%);
         background-color: $accent;
         color: $white;
         width: 40%;
