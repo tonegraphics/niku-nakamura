@@ -28,6 +28,9 @@
       &visited {
         color: $white;
       }
+      &:hover {
+        color: $accent;
+      }
     }
   }
 
