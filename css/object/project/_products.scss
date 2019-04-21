@@ -1,3 +1,32 @@
 .p-products {
   height: 100vh;
+  width: 100%;
+  margin: 0 24px;
+
+  .p-productList {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+    flex-wrap: wrap;
+
+    .p-product {
+      width: 45%;
+      margin: 24px;
+      &__name {
+        font-size: 1.25rem;
+        margin-bottom: 16px;
+      }
+      &__image {
+        width: auto;
+        height: 360px;
+      }
+      &__detail {
+        width: 80%;
+        margin: 16px auto 0;
+        text-align: left;
+      }
+    }
+  }
 }
