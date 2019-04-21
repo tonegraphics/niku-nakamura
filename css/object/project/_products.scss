@@ -1,7 +1,7 @@
 .p-products {
   height: 100vh;
   width: 100%;
-  margin: 0 24px;
+  padding: 0 24px 56px;
 
   .p-productList {
     display: flex;
@@ -12,11 +12,10 @@
     flex-wrap: wrap;
 
     .p-product {
-
       width: 45%;
       margin: 24px;
       &__name {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         margin-bottom: 16px;
       }
       &__image {
@@ -24,9 +23,30 @@
         height: 360px;
       }
       &__detail {
-        width: 80%;
+        font-size: 1rem;
+        width: 432px;
         margin: 16px auto 0;
         text-align: left;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .p-products {
+    height: auto;
+    .p-productList {
+      margin-top: 48px;
+      .p-product {
+        width: 100%;
+        margin-bottom: 48px;
+        &__image {
+          width: 75vw;
+          height: auto;
+        }
+        &__detail {
+          width: 75vw;
+        }
       }
     }
   }
