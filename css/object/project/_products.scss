@@ -21,6 +21,7 @@
       &__image {
         width: auto;
         height: 360px;
+        box-shadow: -8px 8px 6px lighten($black, 60%);
       }
       &__detail {
         font-size: 1rem;

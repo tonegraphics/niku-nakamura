@@ -22,7 +22,7 @@
             -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
             background-color: $accent;
-            box-shadow: 0 4px 8px;
+            box-shadow: -4px 4px 4px lighten($black, 60%);
         }
     }
 }
