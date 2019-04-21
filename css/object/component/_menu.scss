@@ -1,0 +1,110 @@
+@import "variable/_variables";
+
+.c-menu {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $white;
+  padding: 24px;
+  margin: 16px;
+  box-shadow: -8px 8px 6px lighten($black, 60%);
+
+  &__sub {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $white;
+    padding: 24px;
+    width: calc(50% - 32px);
+    margin: 16px;
+    box-shadow: -8px 8px 6px lighten($black, 60%);
+  }
+  &__logo {
+    text-align: center;
+    padding-right: 16px;
+    h3 {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: $black;
+      
+      line-height: 64px;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: $white;
+    }
+  }
+  &__price {
+    h2 {
+      font-size: 2.4rem;
+      padding-bottom: 16px;
+    }
+    span {
+      font-weight: 700;
+    }
+    p {
+      padding-bottom: 8px;
+    }
+  }
+  &__set {
+    display: inline-block;
+    padding: 24px;
+    margin-left: 32px;
+    background-color: $gray;
+    box-shadow: -2px 2px 6px lighten($black, 60%);
+    &-content {
+      ul {
+        vertical-align: top;
+        display: inline-block;
+        padding: 12px;
+        li {
+          padding: 4px 0;
+          span {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+  &__option {
+    width: calc(50% - 32px);
+    background-color: $gray;
+    padding: 24px;
+    margin: 16px;
+    box-shadow: -8px 8px 6px lighten($black, 60%);
+    h4 {
+      font-size: 1.4rem;
+      padding-bottom: 16px;
+    }
+    td {
+      padding: 8px;
+      &:last-child {
+        font-weight: 700;
+      }
+      span {
+        font-size: 0.8rem;
+        padding-left: 4px;
+      }
+    }
+  }
+  &__contact {
+    text-align: center;
+    width: calc(50% - 32px);
+    background-color: $accent;
+    color: $white;
+    padding: 24px;
+    margin: 16px;
+    box-shadow: -8px 8px 6px lighten($black, 60%);
+    h2 {
+      font-size: 2.6rem;
+      padding-bottom: 16px;
+    }
+    rt {
+      font-size: 0.8rem;
+    }
+    h3 {
+      padding-bottom: 8px;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
