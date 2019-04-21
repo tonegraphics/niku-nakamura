@@ -32,8 +32,8 @@
   }
 
   &__title {
-    width: 32vw;
-    height: 18vw;
+    width: 600px;
+    height: 320px;
 
     // background-color: $white;
     background-color: rgba($color: $white, $alpha: 0.5);
@@ -65,5 +65,15 @@
         font-size: 0.8rem;
       }
     }
+    &__title {
+      width: 400px;
+      height: 200px;
+      &--inner {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+    
   }
 }
