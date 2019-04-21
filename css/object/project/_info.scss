@@ -4,12 +4,12 @@
   height: 100vh;
   &-list {
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
+    padding-bottom: 64px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    
 
     text-align: center;
     &__outline {
