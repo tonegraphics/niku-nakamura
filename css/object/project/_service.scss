@@ -1,3 +1,83 @@
+@import "variable/_variables";
+
 .p-service {
-  height: 100vh;
+  height: auto;
+  padding: 0 24px 64px;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__about {
+    align-items: center;
+    width: 40%;
+    padding: 16px;
+    h2 {
+      font-size: 3.5vw;
+      padding: 64px 0;
+    }
+    p {
+      letter-spacing: 0.1rem;
+      font-size: 1.2rem;
+    }
+  }
+  &__image {
+    margin-top: 64px;
+    background-image: url(../../../images/bbq.png);
+    // background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    box-shadow: -8px 8px 6px lighten($black, 60%);
+    height: 60vh;
+    &--title {
+      position: absolute;
+      bottom: 0;
+      height: 16vh;
+      width: 100%;
+      text-align: center;
+      color: $white;
+      background-color: rgba($color: $black, $alpha: 0.8);
+      h3 {
+        font-size: 2.4rem;
+        line-height: 10vh;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  &__menu {
+    width: 60%;
+    &-main {
+      width: 100%;
+    }
+    &-sub {
+      // width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-option {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .p-service {
+    height: auto;
+    &__about {
+      width: 100%;
+      h2 {
+        font-size: 3rem;
+      }
+    }
+    &__menu {
+      width: 100%;
+    }
+  }
 }
