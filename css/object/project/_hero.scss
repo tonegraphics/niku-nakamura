@@ -57,3 +57,13 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .p-hero {
+    &__header {
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
