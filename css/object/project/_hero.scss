@@ -6,7 +6,9 @@
   position: relative;
 
   background-image: url("../../../images/hero.png");
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   display: flex;
   justify-content: center;
@@ -30,10 +32,11 @@
   }
 
   &__title {
-    width: 30vw;
-    height: 30vh;
+    width: 32vw;
+    height: 18vw;
 
-    background-color: $white;
+    // background-color: $white;
+    background-color: rgba($color: $white, $alpha: 0.5);
 
     display: flex;
     justify-content: center;
@@ -42,8 +45,14 @@
     &--inner {
       text-align: center;
       h1 {
-        font-size: 4rem;
-        padding-bottom: 24x;
+        font-size: 4vw;
+        span {
+          color: $niku;
+        }
+      }
+      p {
+        font-size: 1vw;
+        padding-top: 32px;
       }
     }
   }
