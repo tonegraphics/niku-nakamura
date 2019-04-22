@@ -5,7 +5,7 @@
   height: 100vh;
   position: relative;
 
-  background-image: url("../../../images/hero.png");
+  background-image: url("../images/hero.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -61,11 +61,12 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .p-hero {
     &__header {
       a {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
+        font-weight: 700;
       }
     }
     &__title {

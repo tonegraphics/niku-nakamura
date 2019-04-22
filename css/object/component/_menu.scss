@@ -6,17 +6,9 @@
   background-color: $white;
   padding: 24px;
   margin: 16px;
+  width: 480px;
   box-shadow: -8px 8px 6px lighten($black, 60%);
 
-  &__sub {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: $white;
-    padding: 24px;
-    width: calc(50% - 32px);
-    margin: 16px;
-    box-shadow: -8px 8px 6px lighten($black, 60%);
-  }
   &__logo {
     text-align: center;
     padding-right: 16px;
@@ -31,26 +23,34 @@
       font-weight: 400;
       color: $white;
     }
+    p {
+      padding: 8px;
+    }
   }
   &__price {
     h2 {
       font-size: 2.4rem;
       padding-bottom: 16px;
-    }
-    span {
-      font-weight: 700;
+      span {
+        font-size: 1.6rem;
+      }
     }
     p {
-      padding-bottom: 8px;
+      padding: 8px;
+      span {
+        font-weight: 700;
+      }
     }
   }
   &__set {
-    display: inline-block;
-    padding: 24px;
-    margin-left: 32px;
+    width: 480px;
     background-color: $gray;
-    box-shadow: -2px 2px 6px lighten($black, 60%);
+    padding: 24px;
+    margin: 16px;
+    box-shadow: -8px 8px 6px lighten($black, 60%);
     &-content {
+      display: flex;
+      flex-wrap: wrap;
       ul {
         vertical-align: top;
         display: inline-block;
@@ -65,7 +65,7 @@
     }
   }
   &__option {
-    width: calc(50% - 32px);
+    width: 480px;
     background-color: $gray;
     padding: 24px;
     margin: 16px;
@@ -86,25 +86,55 @@
     }
   }
   &__contact {
+    width: 480px;
     text-align: center;
-    width: calc(50% - 32px);
     background-color: $accent;
     color: $white;
     padding: 24px;
     margin: 16px;
     box-shadow: -8px 8px 6px lighten($black, 60%);
     h2 {
-      font-size: 2.6rem;
-      padding-bottom: 16px;
-    }
-    rt {
-      font-size: 0.8rem;
+      font-size: 2.2rem;
+      padding: 16px 0;
     }
     h3 {
       padding-bottom: 8px;
     }
     p {
       font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .c-menu {
+    width: 100%;
+    &__logo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    h2 {
+      font-size: 1.6rem;
+      span {
+        font-size: 1.2rem;
+      }
+    }
+    &__set {
+      width: 100%;
+    }
+    &__option {
+      width: 100%;
+    }
+    &__contact {
+      width: 100%;
+      h2 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
     }
   }
 }
