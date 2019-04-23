@@ -35,6 +35,7 @@
             }
             &:hover {
               color: $accent;
+              transition: 0.5s;
             }
           }
         }
@@ -87,7 +88,6 @@
           margin: 0 auto;
           width: 90%;
           li {
-            margin: 0 autp;
             text-align: center;
             border-bottom: 1px solid $white;
             width: 100%;
