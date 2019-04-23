@@ -80,7 +80,7 @@
         position: absolute;
         top: 72px;
         width: 100%;
-        background-color: rgba($color: $black, $alpha: 0.5);
+        background-color: rgba($color: $black, $alpha: 0.8);
         left: 0;
         ul {
           display: block;
@@ -90,12 +90,13 @@
             margin: 0 autp;
             text-align: center;
             border-bottom: 1px solid $white;
+            width: 100%;
             &:last-child {
               border: none;
             }
             a {
               display: block;
-              font-size: 0.7rem;
+              font-size: 1rem;
               font-weight: 700;
             }
           }
@@ -132,30 +133,30 @@
           }
         }
       }
-      .open {
-        #nav_toggle {
-          span {
-            &:nth-child(1) {
-              top: 12px;
-              -webkit-transform: rotate(135deg);
-              -moz-transform: rotate(135deg);
-              transform: rotate(135deg);
-            }
-            &:nth-child(2) {
-              top: 0;
-              left: 50%;
-            }
-            &:nth-child(3) {
-              top: 12px;
-              -webkit-transform: rotate(-135deg);
-              -moz-transform: rotate(-135deg);
-              transform: rotate(-135deg);
-            }
+    }
+    .open {
+      #nav_toggle {
+        span {
+          &:nth-child(1) {
+            top: 12px;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            transform: rotate(135deg);
+          }
+          &:nth-child(2) {
+            width: 0;
+            left: 50%;
+          }
+          &:nth-child(3) {
+            top: 12px;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            transform: rotate(-135deg);
           }
         }
       }
-      
     }
+
     &__title {
       width: 400px;
       height: 200px;

@@ -1,6 +1,6 @@
 $(function(){
     $('#nav_toggle').click(function(){
-        $('header').toggleClass('open');
+        $('.p-hero__header').toggleClass('open');
         $('nav').slideToggle(500);
     });
 });
