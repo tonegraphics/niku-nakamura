@@ -19,18 +19,25 @@
     position: absolute;
     top: 0;
     // background: linear-gradient(180deg, #080601, transparent);
-
-    a {
-      display: inline-block;
-      text-align: center;
-      line-height: 64px;
-      width: 25%;
-      color: $white;
-      &visited {
-        color: $white;
-      }
-      &:hover {
-        color: $accent;
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          text-align: center;
+          width: 25%;
+          a {
+            display: inline-block;
+            line-height: 64px;
+            color: $white;
+            &visited {
+              color: $white;
+            }
+            &:hover {
+              color: $accent;
+            }
+          }
+        }
       }
     }
   }
