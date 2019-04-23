@@ -40,6 +40,9 @@
         }
       }
     }
+    #nav_toggle {
+      display: none;
+    }
   }
 
   &__title {
@@ -72,10 +75,86 @@
 @media screen and (max-width: 1024px) {
   .p-hero {
     &__header {
-      a {
-        font-size: 0.7rem;
-        font-weight: 700;
+      nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        width: 100%;
+        background-color: rgba($color: $black, $alpha: 0.5);
+        left: 0;
+        ul {
+          display: block;
+          margin: 0 auto;
+          width: 90%;
+          li {
+            margin: 0 autp;
+            text-align: center;
+            border-bottom: 1px solid $white;
+            &:last-child {
+              border: none;
+            }
+            a {
+              display: block;
+              font-size: 0.7rem;
+              font-weight: 700;
+            }
+          }
+        }
       }
+      #nav_toggle{
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        top: 4px;
+        z-index: 100;
+        div {
+          position: relative;
+          span {
+            display: block;
+            height: 3px;
+            background: $white;
+            position:absolute;
+            width: 100%;
+            left: 0;
+            -webkit-transition: 0.5s ease-in-out;
+            -moz-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+            &:nth-child(1) {
+              top: 0px;
+            }
+            &:nth-child(2) {
+              top: 12px;
+            }
+            &:nth-child(3) {
+              top: 24px;
+            }
+          }
+        }
+      }
+      .open {
+        #nav_toggle {
+          span {
+            &:nth-child(1) {
+              top: 12px;
+              -webkit-transform: rotate(135deg);
+              -moz-transform: rotate(135deg);
+              transform: rotate(135deg);
+            }
+            &:nth-child(2) {
+              top: 0;
+              left: 50%;
+            }
+            &:nth-child(3) {
+              top: 12px;
+              -webkit-transform: rotate(-135deg);
+              -moz-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+            }
+          }
+        }
+      }
+      
     }
     &__title {
       width: 400px;
