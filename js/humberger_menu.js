@@ -1,5 +1,5 @@
 $(function(){
-    $('#nav_toggle').click(function(){
+    $('#nav-toggle').click(function(){
         $('.p-hero__header').toggleClass('open');
         $('nav').slideToggle(500);
         console.log("hoge");

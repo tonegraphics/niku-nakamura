@@ -40,7 +40,7 @@
         }
       }
     }
-    #nav_toggle {
+    #nav-toggle {
       display: none;
     }
   }
@@ -102,7 +102,7 @@
           }
         }
       }
-      #nav_toggle{
+      #nav-toggle{
         display: block;
         width: 40px;
         height: 40px;
@@ -136,7 +136,7 @@
       }
     }
     .open {
-      #nav_toggle {
+      #nav-toggle {
         span {
           &:nth-child(1) {
             top: 12px;
