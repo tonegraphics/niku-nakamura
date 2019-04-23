@@ -3,6 +3,7 @@
 .p-stores {
   height: 100vh;
   padding-bottom: 64px;
+
   &-list {
     display: flex;
     flex-wrap: wrap;
@@ -28,6 +29,19 @@
         font-size: 1.2rem;
         padding: 4px;
       }
+
+      a {
+        color: $black;
+        font-size: 1.4rem;
+        &:visited {
+          color: $black;
+        }
+        &:hover {
+          color: $accent;
+          transition: 0.5s;
+        }
+      }
+
       &--contact {
         box-shadow: -8px 8px 6px lighten($black, 60%);
         background-color: $accent;
@@ -36,6 +50,16 @@
         height: 180px;
         padding: 32px;
         margin: 24px;
+        a {
+          color: $white;
+          &:visited {
+            color: $white;
+          }
+          &:hover {
+            color: rgba($color: $white, $alpha: 0.5);
+            transition: 0.5s;
+          }
+        }
         h2 {
           font-size: 2rem;
           padding: 16px;
