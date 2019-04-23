@@ -3,6 +3,14 @@ const sass = require("gulp-sass");
 const sourcemaps   = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require("browser-sync");
+var uglify = require("gulp-uglify");
+
+gulp.task("js", function(done) {
+    gulp.src(["js/**/*.js","!js/min/**/*.js"])
+        .pipe(uglify())
+        .pipe(gulp.dest("./js/min"));
+    done();
+});
 
 gulp.task('server', function() {
   return browserSync.init({
@@ -10,11 +18,11 @@ gulp.task('server', function() {
       baseDir: '.'
     }
   })
-})
+});
 
 gulp.task('bs-reload', function() {
   browserSync.reload();
-})
+});
 
 
 gulp.task('sass', function() {

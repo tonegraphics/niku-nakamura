@@ -30,6 +30,8 @@
             display: inline-block;
             line-height: 64px;
             color: $white;
+            font-size: 1.6rem;
+            // font-weight: 700;
             &visited {
               color: $white;
             }
@@ -87,17 +89,23 @@
           display: block;
           margin: 0 auto;
           width: 90%;
+          padding: 32px 0 56px; //test
           li {
             text-align: center;
             border-bottom: 1px solid $white;
             width: 100%;
-            &:last-child {
-              border: none;
-            }
+            // &:last-child {
+            //   border: none;
+            // } test
+            margin: 16px 0 24px; //test
             a {
               display: block;
-              font-size: 1rem;
-              font-weight: 700;
+              font-size: 1.6rem; //test
+              // font-weight: 700; test
+            }
+            &:hover { //test
+              border-bottom: 1px solid $accent;
+              transition: 0.5s;
             }
           }
         }
